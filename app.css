@@ -1,3 +1,5 @@
+/* global config */
+
 * {
   box-sizing: border-box;
 }
@@ -45,12 +47,11 @@ p,span{
 
 }
 
-
-
 .grey-out{
   color:#c4c4c4
 }
 
+/* main app */
 .container {
   height:100vh;
   background-image: url('https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2692&q=80');
@@ -60,35 +61,30 @@ p,span{
 
 }
 
+/* today */
 
+.today-container{
+  position:absolute;
+  right:84px;
+  top:84px;
+  width:226px;
+  display:grid;
+  grid-template-columns: 1fr;
+}
 
 .today{
   padding: 30px 0;
   display: grid;
  text-align: center;
-  position:absolute;
-  right:84px;
-  top:84px;
-  width:226px;
+ 
   height:309px;
   background: rgba(45, 47, 60, 0.17);
   border-radius: 20px;
 }
 
 
-.today form input{
-  width:80%;
-  font-size: 40px;
-  text-align: center;
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 1.5px solid #fffff8;
-  color:#fffff8;
-  
-}
 
-.city-input img{
+.city-info img{
   padding-bottom: 5px;
 }
 
@@ -121,7 +117,75 @@ p,span{
   width:40px;
 }
 
+.city-input{
+  margin:0 auto;
+}
 
+button {
+  font:inherit;
+  line-height: 1;
+  padding:0.5em 1em;
+  margin-top: 1em;
+  background: none;
+  border: 1px solid #fffff8;
+  color:#fffff8;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+button:hover {
+  background: #fffff8;
+  color:#4F4F4F
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  background-color: rgba(21, 21, 21,0.85);
+  height:100%;
+  z-index: 300;
+}
+
+form input{
+  width:60%;
+  font-size: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1.5px solid #fffff8;
+  color:#fffff8;
+  
+}
+
+
+
+.confirm,.cancel{
+  margin: 2em 1em;
+  padding: 1em 3em;
+}
+
+.cancel{
+  border-color: rgb(158, 158, 158);
+  color:rgb(158, 158, 158);
+}
+
+
+
+/* future */
 
 .future{
   display:grid;
@@ -144,7 +208,7 @@ p,span{
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  background-color: #151515;
+  background-color: rgba(21, 21, 21,0.85);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,9 +226,13 @@ p,span{
   color:#4F4F4F;
 }
 
+/* hide elem */
+
 .hidden{
   display:none;
 }
+
+/* small to medium screens */
 
 @media only screen and (max-width:1200px){
   body{
@@ -184,6 +252,8 @@ p,span{
     
   }
 }
+
+/* small screens */
 
 @media only screen and (max-width:768px){
 

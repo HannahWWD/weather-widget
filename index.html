@@ -1,107 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="app.css" />
   <title>Weather Widget</title>
+  <script src="dist/bundle.js" type="module"></script>
 </head>
+
 <body>
   <div class="container">
+    <div class="today-container">
     <div class="today">
-      <div class="city-input">
-        <div >
-          <span class="font-l">Seattle</span>
-          <img src="./src/asset/select.png" width="15px">
-        </div>
-        <form class="hidden">
-          <input type="text" placeholder="city">
-        </form>
-        
-        <p class="font-s">Sunday, Oct 18</p>
+      <div class="city-info">
+          <span class="font-l" id="city">Seattle</span>
+          <!-- <img src="./src/asset/select.png" width="15px"> -->
+        <p class="font-s" id="date">Sunday, Oct 18</p>
       </div>
 
       <div class="today-temp-container">
         <div class="today-temp">
-          <div class="font-xl">14</div>
+          <div class="font-xl" id="current-temp">14</div>
           <div class="font-l">&deg;</div>
-          <div><img src="./src/asset/rainy.png" alt="rain"></div>
+          <div id="today-weather-icon"><img src="./src/asset/rainy.png" alt="rain"></div>
         </div>
-     
-        <div><span class="font-m" id="today-high">16&deg;</span><span class="font-m">|</span><span class="font-m grey-out" id="today-low">8&deg;</span></div>
+
+        <div><span class="font-m" id="today-high" id="today-high">16</span><span class="font-m">|</span><span
+            class="font-m grey-out" id="today-low" id="today-low">8&deg;</span></div>
 
       </div>
+    
     </div>
-  
+
+    <div class='city-input'>
+      <button type="button" class="font-s" id="change">Change City</button>
+    </div>
+
+    </div>
+
+    <form class="hidden">
+      <input type="text" placeholder="enter city name">
+      <div><button type="submit" class="font-s confirm" id="confirm">Confirm</button>
+        <button type="button" class="font-s cancel" id="cancel">Cancel</button></div>
+     
+    </form>
+   
+
     <div class="future">
       <div class="row">
-      <div class="unit col">
-        <p class="font-xs">Mon</p>
-        <div><img src="./src/asset/rainy.png" alt="rain"></div>
-        <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span class="font-m grey-out">8&deg;</span></div>
+        <div class="unit col">
+          <p class="font-xs">Mon</p>
+          <div><img src="./src/asset/rainy.png" alt="rain"></div>
+          <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span
+              class="font-m grey-out">8&deg;</span></div>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="unit col">
-        <p class="font-xs">Mon</p>
-        <div><img src="./src/asset/rainy.png" alt="rain"></div>
-        <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span class="font-m grey-out">8&deg;</span></div>
+      <div class="row">
+        <div class="unit col">
+          <p class="font-xs">Mon</p>
+          <div><img src="./src/asset/rainy.png" alt="rain"></div>
+          <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span
+              class="font-m grey-out">8&deg;</span></div>
+        </div>
       </div>
-    </div>
 
 
-    <div class="row">
-      <div class="unit col">
-        <p class="font-xs">Mon</p>
-        <div><img src="./src/asset/rainy.png" alt="rain"></div>
-        <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span class="font-m grey-out">8&deg;</span></div>
+      <div class="row">
+        <div class="unit col">
+          <p class="font-xs">Mon</p>
+          <div><img src="./src/asset/rainy.png" alt="rain"></div>
+          <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span
+              class="font-m grey-out">8&deg;</span></div>
+        </div>
       </div>
-    </div>
 
 
-    <div class="row">
-      <div class="unit col">
-        <p class="font-xs">Mon</p>
-        <div><img src="./src/asset/rainy.png" alt="rain"></div>
-        <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span class="font-m grey-out">8&deg;</span></div>
+      <div class="row">
+        <div class="unit col">
+          <p class="font-xs">Mon</p>
+          <div><img src="./src/asset/rainy.png" alt="rain"></div>
+          <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span
+              class="font-m grey-out">8&deg;</span></div>
+        </div>
       </div>
-    </div>
 
 
-    <div class="row">
-      <div class="unit col">
-        <p class="font-xs">Mon</p>
-        <div><img src="./src/asset/rainy.png" alt="rain"></div>
-        <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span class="font-m grey-out">8&deg;</span></div>
+      <div class="row">
+        <div class="unit col">
+          <p class="font-xs">Mon</p>
+          <div><img src="./src/asset/rainy.png" alt="rain"></div>
+          <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span
+              class="font-m grey-out">8&deg;</span></div>
+        </div>
       </div>
-    </div>
 
 
-    <div class="row">
-      <div class="unit col">
-        <p class="font-xs">Mon</p>
-        <div><img src="./src/asset/rainy.png" alt="rain"></div>
-        <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span class="font-m grey-out">8&deg;</span></div>
+      <div class="row">
+        <div class="unit col">
+          <p class="font-xs">Mon</p>
+          <div><img src="./src/asset/rainy.png" alt="rain"></div>
+          <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span
+              class="font-m grey-out">8&deg;</span></div>
+        </div>
       </div>
-    </div>
 
 
-    <div class="row">
-      <div class="unit col">
-        <p class="font-xs">Mon</p>
-        <div><img src="./src/asset/rainy.png" alt="rain"></div>
-        <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span class="font-m grey-out">8&deg;</span></div>
+      <div class="row">
+        <div class="unit col">
+          <p class="font-xs">Mon</p>
+          <div><img src="./src/asset/rainy.png" alt="rain"></div>
+          <div><span class="font-m">14&deg;</span><span class="font-m">|</span><span
+              class="font-m grey-out">8&deg;</span></div>
+        </div>
       </div>
-    </div>
 
 
-    
 
-   
- 
+
+
+
     </div>
   </div>
-  
+
 </body>
+
 </html>
