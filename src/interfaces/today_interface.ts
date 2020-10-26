@@ -4,5 +4,5 @@ export interface TodayElem {
     currentTemp:number;
     highTemp:number;
     lowTemp:number;
-    description:string;
+    code:number;
 }

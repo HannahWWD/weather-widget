@@ -219,11 +219,19 @@ form input{
   width:48px;
   display: block;
   margin:15px 0;
+
 }
 
 .unit span:nth-child(2){
   font-weight: 200;
   color:#4F4F4F;
+}
+
+.icon-container {
+  width:48px;
+  height:60px;
+  margin:10px 0;
+  
 }
 
 /* hide elem */
