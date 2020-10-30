@@ -1,7 +1,8 @@
+import 'progressive-image.js'
 import { getWeatherData } from './utility/getWeatherData'
 import { ChangeCity } from './components/changeCity';
 import { updateBackground } from './utility/updateBackground';
-//import img from './asset/cloudy.png';
+import './styles/app.css';
 
 getWeatherData('seattle')
 updateBackground('seattle')

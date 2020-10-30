@@ -54,10 +54,23 @@ p,span{
 /* main app */
 .container {
   height:100vh;
-  background-image: url('https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2692&q=80');
+  /* // background-image: url('https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2692&q=80'); */
   background-size: cover;
   background-position: center;
   color:#fffff8;
+
+}
+
+figure,
+figure img{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  height:100%;
+  width: 100%;
+  object-fit: cover;
 
 }
 
@@ -260,6 +273,17 @@ form input{
     
   }
 }
+
+.progressive img.reveal {
+  animation: progressiveReveal 0.8s linear;
+  -webkit-animation: progressiveReveal 0.8s linear;
+}
+
+@keyframes progressiveReveal {
+  0% {  opacity: 0; }
+  100% { opacity: 1; }
+}
+
 
 /* small screens */
 
