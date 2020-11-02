@@ -2,17 +2,25 @@
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/app.ts',
   // output: {
   //   filename: 'bundle.js',
   //   path: path.resolve(__dirname, 'dist'),
   //   publicPath: 'dist'
   // },
-  devtool:'inline-source-map',
+  devtool:'source-map',
+  stats: 'verbose',
+  optimization:{
+    minimize: true,
+    minimizer:[new TerserPlugin(),new OptimizeCSSAssetsPlugin({})],
+},
   plugins: [
     new webpack.DefinePlugin({
       "process.env.WEATHER_KEY": JSON.stringify("02c8bac25839400b9bf8d4123ed95e4a"),
@@ -31,12 +39,13 @@ module.exports = {
       cleanStaleWebpackAssets: true,
       protectWebpackAssets: false
   }),
+  new MiniCssExtractPlugin({}),
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       
       {

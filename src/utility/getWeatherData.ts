@@ -8,9 +8,9 @@ const map = generateWeatherMap();
 console.log('hey')
 
 export function getWeatherData(cityname: string) {
-    console.log(process.env.WEATHER_KEY)
     const url = `https://api.weatherbit.io/v2.0/forecast/daily?`
-    axios.get(encodeURI(`${url}city=${cityname}&key=${process.env.WEATHER_KEY}`))
+    //console.log(encodeURI(`${url}city=${cityname}&key=${process.env.WEATHER_KEY}`))
+    axios.get(encodeURI(`${url}city=${cityname}&units=I&key=${process.env.WEATHER_KEY}`))
         .then(response => {
             console.log(response.data)
             const today = new Date();

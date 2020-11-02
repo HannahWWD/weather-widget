@@ -33,6 +33,8 @@ export class ChangeCity {
           this.city = this.cityInputElem.value
            //console.log("this.city:",this.city)
             this.formElem.classList.add('hidden')
+            // clear value after submit
+            this.cityInputElem.value = '';
         }
        
 
