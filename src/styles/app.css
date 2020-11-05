@@ -12,6 +12,7 @@ html {
 body {
   margin: 0;
   overflow: hidden;
+  position: relative;
 }
 p,span{
   line-height: 1;
@@ -53,16 +54,23 @@ p,span{
 
 /* main app */
 .container {
-  height:100vh;
   /* // background-image: url('https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2692&q=80'); */
   background-size: cover;
   background-position: center;
   color:#fffff8;
+  min-height: 100vh;
 
 }
 
+.elem-container{
+  min-height: 100vh;
+  display:grid;
+}
+
+
 figure,
 figure img{
+  margin:0;
   position: fixed;
   left: 0;
   right: 0;
@@ -77,19 +85,19 @@ figure img{
 /* today */
 
 .today-container{
-  position:absolute;
-  right:84px;
-  top:84px;
-  width:226px;
-  display:grid;
-  grid-template-columns: 1fr;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* justify-content: flex-end; */
+  padding:5em;
+
 }
 
 .today{
   padding: 30px 0;
   display: grid;
  text-align: center;
- 
+ width:226px;
   height:309px;
   background: rgba(45, 47, 60, 0.17);
   border-radius: 20px;
@@ -131,7 +139,8 @@ figure img{
 }
 
 .city-input{
-  margin:0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 button {
@@ -208,9 +217,8 @@ form input{
   align-items: center;
   width:100%;
   background: rgba(45, 47, 60, 0.62);
-  position: absolute;
-  bottom:0;
   height:253px;
+  align-self: flex-end;
 }
 
 .unit{
@@ -247,11 +255,30 @@ form input{
   
 }
 
+/* background image change animation */
+.progressive {
+  z-index: -999;
+}
+
+.progressive img.reveal {
+  animation: progressiveReveal 0.8s linear;
+  -webkit-animation: progressiveReveal 0.8s linear;
+}
+
+@keyframes progressiveReveal {
+  0% {  opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
 /* hide elem */
 
 .hidden{
   display:none;
 }
+
+
 
 /* small to medium screens */
 
@@ -274,28 +301,22 @@ form input{
   }
 }
 
-.progressive img.reveal {
-  animation: progressiveReveal 0.8s linear;
-  -webkit-animation: progressiveReveal 0.8s linear;
-}
 
-@keyframes progressiveReveal {
-  0% {  opacity: 0; }
-  100% { opacity: 1; }
-}
 
 
 /* small screens */
 
 @media only screen and (max-width:768px){
 
-  .container{
-    padding-top: 40px;
+  .today-container{
+    align-items: center;
+    justify-content: center;
+    
   }
 
   .today{
-    position:static;
-    margin:0 auto;
+    /* position:static;
+    margin:0 auto; */
   }
 
 

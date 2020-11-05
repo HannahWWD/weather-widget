@@ -16,7 +16,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       "process.env.WEATHER_KEY": JSON.stringify("02c8bac25839400b9bf8d4123ed95e4a"),
-      "process.env.UNSPLASH_KEY":JSON.stringify("WTbmmGUnHFIQiUFmUdpgt6ts226lO9mnOHGLydGkUDA")
+      "process.env.UNSPLASH_KEY":JSON.stringify("WTbmmGUnHFIQiUFmUdpgt6ts226lO9mnOHGLydGkUDA"),
+      "process.env.OPENCAGE_KEY":JSON.stringify("ede0a0629fd442bd9c959b7bd1959ff6")
     }),
     new HtmlWebPackPlugin({
       template: "./src/views/index.html",

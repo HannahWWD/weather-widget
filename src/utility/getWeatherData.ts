@@ -5,7 +5,6 @@ import {generateWeatherMap} from '../map'
 import { Future } from '../components/future';
 
 const map = generateWeatherMap();
-console.log('hey')
 
 export function getWeatherData(cityname: string) {
     const url = `https://api.weatherbit.io/v2.0/forecast/daily?`

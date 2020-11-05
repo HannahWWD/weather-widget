@@ -16,7 +16,7 @@ autocomplete<AutoComplete>(
         minLength:1,
         fetch:(text:string,update:(items:AutoComplete[])=>void)=>{
             text = text.toLowerCase();
-            const suggestions = usaCity.filter(item=>item.label.toLowerCase().startsWith(text)).slice(0,10)
+            const suggestions = usaCity.filter(item=>`${item.label},${item.state}`.toLowerCase().startsWith(text)).slice(0,10)
             update(suggestions)
         },
         onSelect:(item:AutoComplete)=>{
