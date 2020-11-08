@@ -28,8 +28,12 @@ const form = new ChangeCity();
 const formElem = document.querySelector('form') ! as HTMLFormElement
 
 formElem.addEventListener('submit',()=>{
-    getWeatherData(form.city)
-    updateBackground(form.city)
+    if(form.city !== null){
+        getWeatherData(form.city)
+        updateBackground(form.city)
+
+    }
+    
    
 })
 

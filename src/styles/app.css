@@ -205,6 +205,15 @@ form input{
   color:rgb(158, 158, 158);
 }
 
+#error-msg{
+  visibility: hidden;
+}
+
+#error-msg p{
+ 
+  color:rgb(255, 0, 0);
+  line-height: 2;
+}
 
 
 /* future */
@@ -314,9 +323,9 @@ form input{
     
   }
 
-  .today{
-    /* position:static;
-    margin:0 auto; */
+  .confirm,.cancel{
+    display:block;
+    width:200px;
   }
 
 
