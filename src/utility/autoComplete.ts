@@ -3,11 +3,6 @@ import {AutoComplete} from '../interfaces/autoComplete_interface'
 import autocomplete from 'autocompleter'
 
 const input = document.getElementById('auto-complete') ! as HTMLInputElement;
-//const allowedChars = new RegExp(/^[a-zA-Z\s]+$/)
-
-// function charsAllowed(value:string) {
-//     return allowedChars.test(value);
-// }
 
 autocomplete<AutoComplete>(
     {

@@ -13,6 +13,8 @@ updateBackground('seattle')
 
 
 /* get user location -> This is slow, So I disable this feature */
+
+
 // if("geolocation" in navigator){
 //     navigator.geolocation.getCurrentPosition(async(result)=>{
 //         const userLocation = await reversedGeo(result.coords.latitude,result.coords.longitude);
@@ -37,11 +39,5 @@ formElem.addEventListener('submit',()=>{
    
 })
 
-
-
-
-//const weatherIcon = document.getElementById('today-weather-icon')! as HTMLDivElement;
-
-//weatherIcon.innerHTML = `<img src=${img} alt="rain">`
 
 

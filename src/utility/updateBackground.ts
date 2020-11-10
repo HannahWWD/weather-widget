@@ -2,7 +2,6 @@ import axios from 'axios';
 import seattle from '../asset/seattle.jpg';
 import seattleSmall from '../asset/seattle-small.jpg';
 
-//const mainContainer = document.getElementById('main-container') ! as HTMLDivElement;
 
 const backgroundContainer = document.getElementById('background-container')! as HTMLDivElement;
 

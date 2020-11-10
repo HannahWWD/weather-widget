@@ -4,7 +4,7 @@ The weather widget is a one-week personal project to get my hands dirty on TypeS
 
 ## Demo
 
-### Try out live demo [**HERE**](https://clever-minsky-d826e4.netlify.app/).
+### Try out live demo [**HERE**](https://weather-widget-demo.netlify.app/).
 
 
 ## Getting Start
